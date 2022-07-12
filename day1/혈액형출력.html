@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>당신의 혈액형은 <span class="blood-type"></span>형 입니다.</p>
+
+    <script>
+        var bloodType = document.querySelector('.blood-type');
+        //  쿼리셀렉터 돔트리에 가장먼저 나오는 블러드타입 클래스 하나만 선택하겠다
+        var input = prompt('당신의 혈액형은 무엇인가요?');
+// 위에 var inpur 말고 bloodtype넣으면 안됨 강의실은 사람이다 이럴게 됨
+        bloodType.innerText = input;
+        // bloodType 안에 텍스트가 인풋
+        // 하이픈 없애고 대문자로 camel case
+    </script>
+</body>
+</html>
