@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age = prompt("몇살")
+        
+
+        if(age < 0){
+            alert("잘못된 입력입니다")
+        }
+        else if(age < 20){
+            alert("미성년자")
+        }else if(age < 65){
+            alert("성인")
+        }else if(age < 100){
+            alert("노인")
+        }else{
+            alert("잘못된 입력입니다")
+        }
+// age 10이라 하면 미성년자로 나오는 이유
+//  위에 하나 조건 만족하면 밑으로 내려오지 않음
+// 그래서 순서가 중요함
+    </script>
+</body>
+</html>

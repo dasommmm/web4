@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var 복숭아 = prompt("오늘 수확한 복숭아 갯수는?")
+        var 바구니크기 = 10;
+
+        var 필요갯수 = parseInt(복숭아 / 바구니크기);
+
+        if (복숭아 % 바구니크기 != 0) {
+            필요갯수++;
+        }
+        alert(필요갯수);
+        // 복숭아를 바구니크기로 나눈 값의 나머지가 0이 아니라면
+    </script>
+</body>
+</html>
