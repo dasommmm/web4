@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 20px;
+        }
+
         *{
             margin: 0;
             padding: 0;
@@ -17,6 +21,7 @@
             border: 1px solid black;
             box-sizing: border-box;
             padding: 32px;
+            margin-top: 30px;
         }
 
         .now-dan{
@@ -31,17 +36,30 @@
     <button id="calc">출력</button>
 
     <div class="container">
-        <h2 class="now-dan"></h2>
+        <h2 id="now-dan"></h2>
         <p class="output"></p>
     </div>
     
 
     <script>
-        const calcButton = document.getElementById("cla");
+        const calcButton = document.getElementById("calc");
 
         calcButton.addEventListener("click", () =>{
-            
-        })
+            const danInput = document.getElementById("dan-input");
+            const dan = danInput.value;
+            danInput.value = "";
+
+            const nowDan = document.getElementById("now-dan");
+            nowDan.innerHTML = `${dan}단`
+
+            const output = document.getElementsByClassName("output");
+
+            output[0].innerText ="";
+            // +=으로 내용을 계속 더해줌 더하기 전에 초기화 시켜야함
+            for(let i = 1; i <= 9; i++){
+                output[0].innerHTML += `${dan} x ${i} = ${dan*i}<br>`;
+            }
+        });
 
 
 
