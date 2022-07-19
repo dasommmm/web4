@@ -5,12 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 200px;
+            height: 400px;
+            background-color: #ebebeb;
+            border: 1px solid black;
+            box-sizing: border-box;
+            padding: 32px;
+        }
+
+        .now-dan{
+            margin-bottom: 16px;
+
+        }
+    </style>
 </head>
 <body>
     <label for="oh">몇단 출력할까요?</label>
-    <input type="text" class="oh"/>
-    <button>출력</button>
+    <input type="text" id="dan-input"/>
+    <button id="calc">출력</button>
+
+    <div class="container">
+        <h2 class="now-dan"></h2>
+        <p class="output"></p>
+    </div>
+    
+
     <script>
+        const calcButton = document.getElementById("cla");
+
+        calcButton.addEventListener("click", () =>{
+            
+        })
+
+
+
         function 세트로실행(){
             intro();
             구구단();
