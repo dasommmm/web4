@@ -19,17 +19,24 @@
 </head>
 <body>
     <p>원 클릭하면 우로 300px 만큼 움직임</p>
-    <div id="circle" onclick="moveRight()" data-x="0" data-y="0">gg</div>
+    <div id="circle" onclick="moveRight()" data-index="0">gg</div>
 
     <script>
         function moveRight(){
             const circle = document.getElementById("circle");
-           
-            const x = Number(circle.dataset.x) + 300;
-            circle.style.transform = `translateX(${x}px)`;
-            circle.dataset.x = x;
-        //   circle.dataset.x = x; 값을 넣어주는 것 
-        //   circle.style.transform = `translateX(${x}px)`; 움직이기
+            const preset = [
+                {x:0, y:0},
+                {x:300, y:0},
+                {x:300, y:300},
+                {x:0, y:300},
+            ];
+
+            let index = Number(circle.dataset.index);
+            circle.dataset.index = ++index;
+            if(index === 3){
+                circle.dataset.index = -1;
+            }
+            circle.style.transform = `translate(${preset[index].x}px,${preset[index].y}px)`;
 
         }
     </script>

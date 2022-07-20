@@ -24,9 +24,12 @@
     <script>
         function moveRight(){
             const circle = document.getElementById("circle");
-            x = Number(circle.dataset.x) + 300;
+            const x = Number(circle.dataset.x) + 300;
             circle.dataset.x = x;
             circle.style.transform = `translateX(${x}px)`;
+            //   circle.dataset.x = x; 값을 넣어주는 것 
+            //   circle.style.transform = `translateX(${x}px)`; 움직이기
+
         }
     </script>
 </body>
