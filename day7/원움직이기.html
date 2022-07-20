@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circle{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+            background-color: aquamarine;
+        
+        }
+    </style>
+</head>
+<body>
+    <p>원 클릭하면 우로 300px 만큼 움직임</p>
+    <div id="circle" onclick="moveRight()" data-x="0">gg</div>
+
+    <script>
+        function moveRight(){
+            const circle = document.getElementById("circle");
+            x = Number(circle.dataset.x) + 300;
+            circle.dataset.x = x;
+            circle.style.transform = `translateX(${x}px)`;
+        }
+    </script>
+</body>
+</html>
