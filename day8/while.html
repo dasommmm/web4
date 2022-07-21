@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // while()반복문
+        // for()는 식이 복잡 이거는 간단
+        /* for(let i = 0; i < array.length; i++ ) {
+            반복할내용
+        }
+        위와같이 복잡하지않고
+
+        while(true){
+            반복할내용
+        }
+        
+        비교적 간단
+
+
+        반복문이나 조건문 흐름을 제어하는 명령어가 있음
+        break문 - 흐름을 종료시키고 반복문 탈출
+        
+        continue문 - 반복문에서 탈출하지는 않지만
+        continue를 만나면 아래 구문이 모두 무시되고 다시 반복
+
+        */
+
+        while(true){
+            const input = prompt("33을 입력하면 반복문 종료");
+            if(input==="33"){
+                break;
+            }
+        }
+
+        let count;
+
+        while(true){
+            const input = prompt(
+                `${count}번째 입력입니다 1을 입력하면 카운트되지 않습니다`
+                );
+                if(input === "1"){
+                    continue;
+                }
+                count++; //continue가 작동하면 이부분 무시
+        }
+    </script>
+</body>
+</html>

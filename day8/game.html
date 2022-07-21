@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const answer = Math.floor(Math.random()*100+1);//1~100까지
+        // const count = 5; //도전기회
+        let count; //난이도설정
+
+        alert("up&down 게임");
+        alert("1부터 100사이 숫자 맞춰주세여");
+        
+        // count = 7 - prompt(`난이도 입력`, `1:easyㅣ2:normalㅣ3:hard`);
+        
+        const level = Number(prompt("난이도"));
+        if(level === 1){
+            count = 6;
+        }else if(level === 2){
+            count = 5;
+        }else if(level === 3){
+            count =4;
+        }
+
+        for(let i=0; i<count; i++){
+            const input =prompt("정답은 무엇일까요");
+
+            if(input===answer){
+                alert('정답입니다');
+            }else if (i === count-1){
+                alert(`실패입니다 정답은 ${answer}입니다`);
+            }else if(input>answer){
+                alert('Down');
+            }else if(input<answer){
+                alert('up');
+            }
+        }
+    </script>
+</body>
+</html>
